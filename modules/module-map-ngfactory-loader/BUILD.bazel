@@ -34,5 +34,6 @@ ts_library(
 
 jasmine_node_test(
     name = "unit_test",
+    timeout = "short",
     srcs = [":unit_test_lib"],
 )

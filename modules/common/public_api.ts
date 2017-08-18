@@ -6,4 +6,6 @@
  * found in the LICENSE file at https://angular.io/license
  */
 export { TransferHttpCacheModule } from './src/transfer_http';
-export { StateTransferInitializerModule } from './src/state-transfer-initilizer/module';
+export { StateTransferInitializerModule } from './src/state-transfer-initializer/module';
+export * from './src/private_export';
+export { NgSetupOptions } from './src/universal-engine/interfaces';

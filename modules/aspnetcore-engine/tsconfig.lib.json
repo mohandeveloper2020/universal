@@ -23,7 +23,8 @@
     "types": ["node"],
     "baseUrl": ".",
     "paths": {
-      "@nguniversal/aspnetcore-engine/*": ["../../dist/packages/aspnetcore-engine/*"]
+      "@nguniversal/aspnetcore-engine/*": ["../../dist/packages/aspnetcore-engine/*"],
+      "@nguniversal/common": ["../../dist/packages/common"]
     }
   },
   "files": [

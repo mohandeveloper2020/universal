@@ -23,7 +23,8 @@
     "types": [],
     "baseUrl": ".",
     "paths": {
-      "@nguniversal/express-engine/*": ["../../dist/packages/express-engine/*"]
+      "@nguniversal/express-engine/*": ["../../dist/packages/express-engine/*"],
+      "@nguniversal/common": ["../../dist/packages/common"]
     }
   },
   "files": [

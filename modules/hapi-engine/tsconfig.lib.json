@@ -23,7 +23,8 @@
     "types": [],
     "baseUrl": ".",
     "paths": {
-      "@nguniversal/hapi-engine/*": ["../../dist/packages/hapi-engine/*"]
+      "@nguniversal/hapi-engine/*": ["../../dist/packages/hapi-engine/*"],
+      "@nguniversal/common": ["../../dist/packages/common"]
     }
   },
   "files": [

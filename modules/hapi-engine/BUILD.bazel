@@ -12,7 +12,9 @@ ng_module(
     ]),
     module_name = "@nguniversal/hapi-engine",
     deps = [
-        "//modules/hapi-engine/tokens",
+        "//modules/common",
+        "//modules/common/tokens",
+        "@rxjs",
     ],
 )
 
@@ -24,7 +26,6 @@ ng_package(
     entry_point = "modules/hapi-engine/index.js",
     deps = [
         ":hapi-engine",
-        "//modules/hapi-engine/tokens",
     ],
 )
 
@@ -39,7 +40,7 @@ ts_library(
     ],
 )
 
-jasmine_node_test(
-    name = "unit_test",
-    srcs = [":unit_test_lib"],
-)
+# jasmine_node_test(
+#     name = "unit_test",
+#     srcs = [":unit_test_lib"],
+# )
