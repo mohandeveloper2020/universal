@@ -27,12 +27,6 @@ if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then
   fi
 fi
 
-if is_lint; then
-  npm run lint
 elif is_build; then
   npm run build
-elif is_karma; then
-  npm run test:browser
-elif is_jasmine; then
-  npm run test:server
 fi
