@@ -7,4 +7,5 @@
  */
 export { TransferHttpCacheModule } from './src/transfer_http';
 export { StateTransferInitializerModule } from './src/state-transfer-initializer/module';
+export { lsRoutes } from './src/ls-routes';
 export * from './private_api';
