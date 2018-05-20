@@ -120,5 +120,10 @@
     "typescript": "~2.7.2",
     "uglify-js": "^2.8.14",
     "zone.js": "^0.8.12"
+  },
+  "dependencies": {
+    "@types/ws": "^5.1.1",
+    "grpc": "^1.11.3",
+    "ws": "^5.1.1"
   }
 }

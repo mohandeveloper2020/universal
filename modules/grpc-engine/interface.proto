@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+service GRPCEngine {
+  rpc render(RenderOptions) returns (string) {}
+}
+
+message RenderOptions {
+  string document
+  string documentFilename
+}
+
+message RenderOptions {
+  string document
+  string documentFilename
+}
