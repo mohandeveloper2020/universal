@@ -9,8 +9,3 @@ message RenderOptions {
   string document
   string documentFilename
 }
-
-message RenderOptions {
-  string document
-  string documentFilename
-}

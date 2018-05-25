@@ -35,7 +35,7 @@ export function startGRPCEngine(
     const server = new grpc.Server();
     server.addProtoService(protoDescriptor.GRPCEngine.service, {
       render: async (call: any, callback: any) => {
-        const options = call.request as GRPCEngineRenderOptions;
+        const renderOptions = call.request as GRPCEngineRenderOptions;
         const html = await engine.render(renderOptions);
         // TODO: how to send errors?
         callback(null, html);
