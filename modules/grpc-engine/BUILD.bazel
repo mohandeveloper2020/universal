@@ -24,6 +24,7 @@ ng_module(
     module_name = "@nguniversal/grpc-engine",
     deps = [
         "//modules/common",
+        # ":engine_ts_proto"
     ],
 )
 
@@ -40,18 +41,18 @@ ng_package(
     ],
 )
 
-ts_library(
-    name = "unit_test_lib",
-    testonly = True,
-    srcs = glob([
-        "spec/**/*.spec.ts",
-    ]),
-    deps = [
-        ":grpc-engine",
-    ],
-)
+# ts_library(
+#     name = "unit_test_lib",
+#     testonly = True,
+#     srcs = glob([
+#         "spec/**/*.spec.ts",
+#     ]),
+#     deps = [
+#         ":grpc-engine",
+#     ],
+# )
 
-jasmine_node_test(
-    name = "unit_test",
-    srcs = [":unit_test_lib"],
-)
+# jasmine_node_test(
+#     name = "unit_test",
+#     srcs = [":unit_test_lib"],
+# )
