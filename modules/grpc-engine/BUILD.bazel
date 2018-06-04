@@ -3,17 +3,27 @@ load("//tools:defaults.bzl", "ts_library", "ng_module", "ng_package")
 package(default_visibility = ["//visibility:public"])
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "jasmine_node_test")
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_proto_library")
+
+proto_library(
+    name = "engine_proto",
+    srcs = ["grpc-engine.proto"],
+)
+
+ts_proto_library(
+    name = "engine_ts_proto",
+    deps = [":engine_proto"],
+)
 
 ng_module(
-    name = "socket-engine",
+    name = "grpc-engine",
     srcs = glob([
         "*.ts",
         "src/**/*.ts",
     ]),
-    module_name = "@nguniversal/socket-engine",
+    module_name = "@nguniversal/grpc-engine",
     deps = [
         "//modules/common",
-
     ],
 )
 
@@ -21,12 +31,12 @@ ng_package(
     name = "npm_package",
     srcs = [
         ":package.json",
+        ":grpc-engine.proto",
     ],
-    entry_point = "modules/socket-engine/index.js",
+    entry_point = "modules/grpc-engine/index.js",
     readme_md = ":README.md",
     deps = [
-        ":socket-engine",
-        "//modules/common",
+        ":grpc-engine",
     ],
 )
 
@@ -37,7 +47,7 @@ ts_library(
         "spec/**/*.spec.ts",
     ]),
     deps = [
-        ":socket-engine",
+        ":grpc-engine",
     ],
 )
 

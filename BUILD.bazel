@@ -20,5 +20,6 @@ node_modules_filegroup(
         "zone.js",
         "@angular",
         "@types",
+        "grpc",
     ],
 )

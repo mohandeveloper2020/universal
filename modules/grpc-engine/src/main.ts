@@ -27,7 +27,7 @@ export function startGRPCEngine(
   host = 'localhost',
   port = 9090
 ): Promise<GRPCEngineServer> {
-  // TODO: how will this work with deployment?
+  // needs to be a directory up so it lines up with deployment
   const protoDescriptor = grpc.load('../interface.proto');
   return new Promise((resolve, _reject) => {
     const engine = new CommonEngine(moduleOrFactory);
